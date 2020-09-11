@@ -18,7 +18,8 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   const { id } = req.params
 
-  resources.getResourceById(id)
+  resources
+    .getResourceById(id)
     .then((resource) => {
       if (resource) {
         res.json(resource)
@@ -35,7 +36,8 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const data = req.body
-  resources.addResource(data)
+  resources
+    .addResource(data)
     .then((resource) => {
       res.status(201).json(resource)
     })

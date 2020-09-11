@@ -9,13 +9,15 @@ const getResourceById = (id) => {
 }
 
 const addResource = (body) => {
-    return db("resources").insert(body).then(item =>{ return getResourceById(item)})
+  return db("resources")
+    .insert(body)
+    .then((item) => {
+      return getResourceById(item)
+    })
 }
 
-
-
 module.exports = {
-    getResources,
-    getResourceById,
-    addResource,
+  getResources,
+  getResourceById,
+  addResource,
 }

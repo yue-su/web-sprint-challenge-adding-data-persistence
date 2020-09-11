@@ -17,7 +17,8 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   const { id } = req.params
-    projects.getProjectById(id)
+  projects
+    .getProjectById(id)
     .then((project) => {
       if (project) {
         res.json(project)
@@ -47,12 +48,6 @@ router.post("/", (req, res) => {
 router.get("/:id/tasks", (req, res) => {
   projects
     .getTasksById(req.params.id)
-    .then((item) => res.status(200).json(item))
-})
-
-router.get("/:id/shoppingList", (req, res) => {
-  recipes
-    .getShoppingList(req.params.id)
     .then((item) => res.status(200).json(item))
 })
 

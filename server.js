@@ -8,8 +8,8 @@ const server = express()
 
 server.use(express.json())
 
-server.get('/', (req, res) => {
-    res.status(200).json({message: 'Welcome!'})
+server.get("/", (req, res) => {
+  res.status(200).json({ message: "Welcome!" })
 })
 server.use("/api/projects", projectRouter)
 server.use("/api/resources", resourceRouter)
