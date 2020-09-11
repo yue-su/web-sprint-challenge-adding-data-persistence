@@ -17,6 +17,17 @@ const getTasksById = (project_id) => {
     .where("projects.id", project_id)
 }
 
+const getProjectById = (id) => {
+  return db("projects").where("id", id)
+}
+
+const addProject = (body) => {
+    return db("projects")
+      .insert(body)
+      .then((item) => {
+        return getProjectById(item)
+      })
+}
 
 const getShoppingList = (recipe_id) => {
   return db("recipe_detail")
@@ -34,5 +45,7 @@ const getShoppingList = (recipe_id) => {
 module.exports = {
   getProjects,
     getTasksById,
-  getShoppingList,
+    getShoppingList,
+    getProjectById,
+  addProject,
 }
