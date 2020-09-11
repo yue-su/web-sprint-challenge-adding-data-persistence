@@ -4,7 +4,7 @@ const getProjects = () => {
   return db("projects")
 }
 
-const getTasks = (project_id) => {
+const getTasksById = (project_id) => {
   return db("projects")
     .join("tasks", "projects.id", "tasks.project_id")
     .select(
@@ -16,7 +16,6 @@ const getTasks = (project_id) => {
     )
     .where("projects.id", project_id)
 }
-
 
 
 const getShoppingList = (recipe_id) => {
@@ -34,6 +33,6 @@ const getShoppingList = (recipe_id) => {
 
 module.exports = {
   getProjects,
-  getTasks,
+    getTasksById,
   getShoppingList,
 }

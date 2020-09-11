@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 
 router.get("/:id/tasks", (req, res) => {
   recipes
-    .getTasks(req.params.id)
+    .getTasksById(req.params.id)
     .then((item) => res.status(200).json(item))
 })
 
