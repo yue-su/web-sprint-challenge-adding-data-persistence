@@ -2,10 +2,12 @@
 
 module.exports = {
   development: {
-    client: "sqlite3",
-    useNullAsDefault: true,
+    client: "pg",
     connection: {
-      filename: "./data/projects.db3",
+      host: "localhost",
+      database: "projects",
+      user: "postgres",
+      password: "923712",
     },
     pool: {
       afterCreate: (conn, done) => {
