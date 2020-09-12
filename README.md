@@ -48,11 +48,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
+DB is a place where we store data.
+SQL is the language set that is used for manipulating the data.
+
 2. Why do tables need a `primary key`?
+
+A uniqle id
 
 3. What is the name given to a table column that references the primary key on another table.
 
+Foreign key
+
 4. What do we need in order to have a _many to many_ relationship between two tables.
+
+A third table that is mapping the relations of the two tables.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
